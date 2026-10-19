@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Trang mẫu thực hành bố cục responsive bằng CSS Flexbox.">
+    <title>Flexbox Layout | Góc học tập</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="page">
+        <header class="header" id="trang-chu">
+            <a class="brand" href="#trang-chu" aria-label="Góc học tập - Trang chủ">
+                <span class="brand-mark" aria-hidden="true">G</span>
+                <span>Góc học tập</span>
+            </a>
+            <p class="header-note">Ý tưởng nhỏ, kiến thức lớn.</p>
+        </header>
+
+        <nav class="nav" aria-label="Điều hướng chính">
+            <a class="nav-link active" href="#trang-chu" aria-current="page">Trang chủ</a>
+            <a class="nav-link" href="#bai-viet">Bài viết</a>
+            <a class="nav-link" href="#tin-moi">Tin mới</a>
+            <a class="nav-link" href="#lien-he">Liên hệ</a>
+        </nav>
+
+        <div class="main-container">
+            <main class="content" id="bai-viet">
+                <article class="featured-card">
+                    <div class="article-meta">
+                        <span class="tag">Thiết kế web</span>
+                        <span>12 tháng 6, 2025</span>
+                    </div>
+                    <h1>Bắt đầu với CSS Flexbox</h1>
+                    <p class="lead">
+                        Sắp xếp nội dung gọn gàng, linh hoạt và dễ thích ứng với mọi kích thước màn hình.
+                    </p>
+                    <div class="feature-art" role="img" aria-label="Minh họa các khối giao diện được sắp xếp bằng Flexbox">
+                        <div class="art-window">
+                            <span class="art-dot"></span>
+                            <span class="art-dot"></span>
+                            <span class="art-dot"></span>
+                            <div class="art-layout">
+                                <span class="art-block art-block-wide"></span>
+                                <span class="art-block"></span>
+                                <span class="art-block art-block-small"></span>
+                            </div>
+                        </div>
+                        <span class="art-label">display: flex;</span>
+                    </div>
+                    <h2>Flexbox giúp việc dàn trang trở nên đơn giản</h2>
+                    <p>
+                        Flexbox là công cụ CSS mạnh mẽ để căn chỉnh và phân phối không gian giữa các phần tử.
+                        Chỉ với một vài thuộc tính, bạn có thể tạo bố cục cân đối mà vẫn dễ dàng thay đổi khi
+                        màn hình nhỏ lại.
+                    </p>
+                    <a class="text-link" href="#huong-dan">Khám phá các bước thực hiện <span aria-hidden="true">→</span></a>
+                </article>
+
+                <section class="steps" id="huong-dan" aria-labelledby="steps-title">
+                    <div class="section-heading">
+                        <div>
+                            <span class="eyebrow">Thực hành</span>
+                            <h2 id="steps-title">Ba bước dựng bố cục</h2>
+                        </div>
+                        <span class="section-icon" aria-hidden="true">✦</span>
+                    </div>
+                    <div class="step-list">
+                        <article class="step-card">
+                            <span class="step-number">01</span>
+                            <h3>Tạo cấu trúc</h3>
+                            <p>Chia trang thành header, navigation, nội dung chính, sidebar và footer.</p>
+                        </article>
+                        <article class="step-card">
+                            <span class="step-number">02</span>
+                            <h3>Dùng Flexbox</h3>
+                            <p>Sắp xếp các vùng nội dung theo hàng hoặc cột với <code>display: flex</code>.</p>
+                        </article>
+                        <article class="step-card">
+                            <span class="step-number">03</span>
+                            <h3>Tối ưu mobile</h3>
+                            <p>Chuyển nội dung thành một cột trên màn hình nhỏ để dễ đọc và thao tác.</p>
+                        </article>
+                    </div>
+                </section>
+            </main>
+
+            <aside class="sidebar" aria-label="Nội dung phụ">
+                <section class="sidebar-card" id="tin-moi">
+                    <div class="sidebar-heading">
+                        <span class="eyebrow">Cập nhật</span>
+                        <h2>Tin mới</h2>
+                    </div>
+                    <a class="news-item" href="#bai-viet">
+                        <span class="news-date">10.06.2025 · 5 phút đọc</span>
+                        <span class="news-title">5 thuộc tính Flexbox bạn nên biết</span>
+                        <span class="news-arrow" aria-hidden="true">↗</span>
+                    </a>
+                    <a class="news-item" href="#bai-viet">
+                        <span class="news-date">08.06.2025 · 3 phút đọc</span>
+                        <span class="news-title">Responsive design bắt đầu từ đâu?</span>
+                        <span class="news-arrow" aria-hidden="true">↗</span>
+                    </a>
+                    <a class="news-item" href="#bai-viet">
+                        <span class="news-date">04.06.2025 · 4 phút đọc</span>
+                        <span class="news-title">Căn giữa phần tử không còn khó</span>
+                        <span class="news-arrow" aria-hidden="true">↗</span>
+                    </a>
+                </section>
+
+                <section class="tip-card">
+                    <span class="tip-icon" aria-hidden="true">✳</span>
+                    <h2>Mẹo nhỏ</h2>
+                    <p>Dùng <code>gap</code> để tạo khoảng cách đồng đều giữa các phần tử Flexbox.</p>
+                    <code class="code-sample">gap: 1rem;</code>
+                </section>
+
+                <section class="newsletter" id="lien-he">
+                    <span class="eyebrow">Mỗi tuần một chút</span>
+                    <h2>Tiếp tục học hỏi</h2>
+                    <p>Khám phá thêm những kiến thức web hữu ích trong các bài viết tiếp theo.</p>
+                    <a class="newsletter-link" href="mailto:hello@goc-hoctap.example">Gửi lời chào <span aria-hidden="true">→</span></a>
+                </section>
+            </aside>
+        </div>
+
+        <footer class="footer">
+            <a class="footer-brand" href="#trang-chu">Góc học tập</a>
+            <p>Học điều mới, mỗi ngày một chút.</p>
+            <span class="copyright">© 2025 Góc học tập</span>
+        </footer>
+    </div>
+</body>
+</html>
